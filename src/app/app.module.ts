@@ -16,11 +16,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { LoginServiceService } from './service/login-service.service';
 
 @NgModule({
   declarations: [
     AppComponent, LoginComponent,
-      RegisterComponent
+      RegisterComponent,
+      HomeComponent
    ],
   imports: [
     BrowserModule,
@@ -39,7 +42,9 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    LoginServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
