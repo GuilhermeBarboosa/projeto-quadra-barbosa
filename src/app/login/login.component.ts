@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { LoginServiceService } from '../service/login-service.service';
 import { UserService } from '../service/user.service';
 import { LoginClass } from '../shared/login-class';
+import { NotifierService } from '../shared/notifier.service';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,9 @@ import { LoginClass } from '../shared/login-class';
 export class LoginComponent implements OnInit {
 
   constructor(private loginService: LoginServiceService,
-              private userService: UserService,
               private router: Router,
-              private formBuilder: FormBuilder) { }
+              private formBuilder: FormBuilder,
+              private notifier: NotifierService) { }
 
   formulario!: FormGroup;
 
@@ -51,7 +52,12 @@ export class LoginComponent implements OnInit {
               this.router.navigateByUrl('/home');
             }
           )
-        });
+        },
+        (error) => {
+            this.notifier.ShowError('Usuário ou senha inválidos!');
+        }
+
+        );
 
     }else{
       this.formulario.reset();

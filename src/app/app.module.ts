@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { LoginServiceService } from './service/login-service.service';
+import {ToastrModule} from 'ngx-toastr'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LoginServiceService } from './service/login-service.service';
     MatAutocompleteModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     LoginServiceService
