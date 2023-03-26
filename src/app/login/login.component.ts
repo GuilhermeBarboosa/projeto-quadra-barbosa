@@ -1,7 +1,9 @@
 import { HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginServiceService } from '../service/login-service.service';
+import { UserService } from '../service/user.service';
 import { LoginClass } from '../shared/login-class';
 
 @Component({
@@ -12,6 +14,8 @@ import { LoginClass } from '../shared/login-class';
 export class LoginComponent implements OnInit {
 
   constructor(private loginService: LoginServiceService,
+              private userService: UserService,
+              private router: Router,
               private formBuilder: FormBuilder) { }
 
   formulario!: FormGroup;
@@ -33,18 +37,21 @@ export class LoginComponent implements OnInit {
 
       this.loginService.login(loginClass).subscribe(
         (data) => {
-          let token = JSON.parse(JSON.stringify(data));
 
-          console.log(token.token);
+          var loginResponse = JSON.parse(JSON.stringify(data));
 
-          // var headers_object = new HttpHeaders().set("x-access-token", token.token);
+          localStorage.setItem('token', loginResponse.token);
 
-          // this.loginService.verifyToken().subscribe(
-          //   (data) => {
-          //     console.log(data);
-          //   }
-          // )
-        })
+          this.loginService.verifyToken().subscribe(
+            (data) => {
+              loginResponse = JSON.parse(JSON.stringify(data));
+
+              localStorage.setItem('userId', loginResponse.userId);
+
+              this.router.navigateByUrl('/home');
+            }
+          )
+        });
 
     }else{
       this.formulario.reset();

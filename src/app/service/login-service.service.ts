@@ -8,13 +8,17 @@ import { LoginClass } from '../shared/login-class';
 export class LoginServiceService {
 
 constructor(private http: HttpClient) { }
+    tokenDTO = {
+      token: ''
+    }
 
   login(login: LoginClass) {
     return this.http.post('http://localhost:3000/users/login', login);
   }
 
   verifyToken() {
-    return this.http.get('http://localhost:3000/users/verificartoken');
+    this.tokenDTO.token = localStorage.getItem('token') || '';
+    return this.http.post('http://localhost:3000/users/verificartoken', this.tokenDTO);
   }
 
 }
