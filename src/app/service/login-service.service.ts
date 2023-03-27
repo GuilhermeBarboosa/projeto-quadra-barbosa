@@ -1,3 +1,4 @@
+import { environment } from './../../../environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoginClass } from '../shared/login-class';
@@ -13,12 +14,12 @@ constructor(private http: HttpClient) { }
     }
 
   login(login: LoginClass) {
-    return this.http.post('http://localhost:3000/users/login', login);
+    return this.http.post(`${environment.api}/users/login`, login);
   }
 
   verifyToken() {
     this.tokenDTO.token = localStorage.getItem('token') || '';
-    return this.http.post('http://localhost:3000/users/verificartoken', this.tokenDTO);
+    return this.http.post(`${environment.api}/users/verificartoken`, this.tokenDTO);
   }
 
 }

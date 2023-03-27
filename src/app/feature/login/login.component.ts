@@ -1,11 +1,10 @@
+import { LoginClass } from './../../shared/login-class';
+import { NotifierService } from './../../shared/notifier.service';
+import { LoginServiceService } from './../../service/login-service.service';
 import { HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginServiceService } from '../service/login-service.service';
-import { UserService } from '../service/user.service';
-import { LoginClass } from '../shared/login-class';
-import { NotifierService } from '../shared/notifier.service';
 
 @Component({
   selector: 'app-login',
