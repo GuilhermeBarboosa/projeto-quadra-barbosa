@@ -21,6 +21,19 @@ export class LoginComponent implements OnInit {
   formulario!: FormGroup;
 
   ngOnInit() {
+
+    if(localStorage.getItem('token') != null) {
+      this.loginService.verifyToken().subscribe(
+        (data) => {
+          this.router.navigateByUrl('/home');
+        },
+        (error) => {
+          localStorage.removeItem('token');
+          this.notifier.ShowInfo('Faça seu login');
+        }
+      )
+    }
+
     this.formulario = this.formBuilder.group({
       email: ['gui@gmail.com', Validators.required],
       senha: ['gui', Validators.required]

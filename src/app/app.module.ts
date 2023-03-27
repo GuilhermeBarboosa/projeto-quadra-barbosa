@@ -1,3 +1,5 @@
+import { EditUserComponent } from './feature/user/edit-user/edit-user.component';
+import { UserTableComponent } from './feature/user/user-table/user-table.component';
 import { CommonModule } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatInputModule} from '@angular/material/input';
@@ -11,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table'
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +26,10 @@ import { HomeComponent } from './feature/home/home.component';
 import { LoginComponent } from './feature/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-
+import { CreateUserComponent } from './feature/user/create-user/create-user.component';
+import { ButtonAdicionarComponent } from './components/button-adicionar/button-adicionar.component';
+import { ButtonExcluirComponent } from './components/button-excluir/button-excluir.component';
+import { ButtonEditarComponent } from './components/button-editar/button-editar.component';
 @NgModule({
   declarations: [
       AppComponent,
@@ -31,7 +37,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
       RegisterComponent,
       HomeComponent,
       NavbarComponent,
-      SidebarComponent
+      SidebarComponent,
+      UserTableComponent,
+      CreateUserComponent,
+      EditUserComponent,
+      ButtonAdicionarComponent,
+      ButtonExcluirComponent,
+      ButtonEditarComponent
    ],
   imports: [
     BrowserModule,
@@ -50,6 +62,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HttpClientModule,
     AppRoutingModule,
     MatIconModule,
+    MatTableModule,
     ToastrModule.forRoot()
   ],
   providers: [
