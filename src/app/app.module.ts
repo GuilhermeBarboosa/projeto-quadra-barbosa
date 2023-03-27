@@ -30,6 +30,7 @@ import { CreateUserComponent } from './feature/user/create-user/create-user.comp
 import { ButtonAdicionarComponent } from './components/button-adicionar/button-adicionar.component';
 import { ButtonExcluirComponent } from './components/button-excluir/button-excluir.component';
 import { ButtonEditarComponent } from './components/button-editar/button-editar.component';
+import { ButtonRegistrarComponent } from './components/button-registrar/button-registrar.component';
 @NgModule({
   declarations: [
       AppComponent,
@@ -43,7 +44,8 @@ import { ButtonEditarComponent } from './components/button-editar/button-editar.
       EditUserComponent,
       ButtonAdicionarComponent,
       ButtonExcluirComponent,
-      ButtonEditarComponent
+      ButtonEditarComponent,
+      ButtonRegistrarComponent
    ],
   imports: [
     BrowserModule,

@@ -22,11 +22,11 @@ export class CreateUserComponent implements OnInit {
 
   ngOnInit() {
     this.formulario = this.formBuilder.group({
-      email: ['a@gmail.com', Validators.required],
-      senha: ['a', Validators.required],
-      nome: ['a', Validators.required],
-      idade: ['2', Validators.required],
-      role: ['1', Validators.required]
+      email: ['', Validators.required],
+      senha: ['', Validators.required],
+      nome: ['', Validators.required],
+      idade: ['', Validators.required],
+      role: [1, Validators.required]
     })
   }
 
