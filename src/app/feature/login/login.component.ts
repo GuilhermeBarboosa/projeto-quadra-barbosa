@@ -1,3 +1,4 @@
+import { VerifytokenService } from './../../shared/verifytoken.service';
 import { LoginClass } from './../../shared/login-class';
 import { NotifierService } from './../../shared/notifier.service';
 import { LoginServiceService } from './../../service/login-service.service';
@@ -16,23 +17,14 @@ export class LoginComponent implements OnInit {
   constructor(private loginService: LoginServiceService,
               private router: Router,
               private formBuilder: FormBuilder,
-              private notifier: NotifierService) { }
+              private notifier: NotifierService,
+              private verifytokenService: VerifytokenService) { }
 
   formulario!: FormGroup;
 
   ngOnInit() {
 
-    if(localStorage.getItem('token') != null) {
-      this.loginService.verifyToken().subscribe(
-        (data) => {
-          this.router.navigateByUrl('/home');
-        },
-        (error) => {
-          localStorage.removeItem('token');
-          this.notifier.ShowInfo('Faça seu login');
-        }
-      )
-    }
+    this.verifytokenService.verifyJWT();
 
     this.formulario = this.formBuilder.group({
       email: ['gui@gmail.com', Validators.required],
