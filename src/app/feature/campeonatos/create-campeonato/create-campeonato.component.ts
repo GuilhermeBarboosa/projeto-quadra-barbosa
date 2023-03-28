@@ -23,7 +23,7 @@ export class CreateCampeonatoComponent implements OnInit {
 
   ngOnInit() {
     this.formulario = this.formBuilder.group({
-      campeonato: ['', Validators.required]
+      campeonato: ['', [Validators.required, Validators.minLength(3)]]
     });
   }
 

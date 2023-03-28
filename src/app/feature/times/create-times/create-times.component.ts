@@ -23,7 +23,7 @@ export class CreateTimesComponent implements OnInit {
 
   ngOnInit() {
     this.formulario = this.formBuilder.group({
-      time: ['', Validators.required],
+      time: ['', [Validators.required, Validators.minLength(3)]],
       qtd_pontos: ['', Validators.required],
       partidas_jogadas: ['', Validators.required],
       qtd_jogadores: [0, Validators.required],

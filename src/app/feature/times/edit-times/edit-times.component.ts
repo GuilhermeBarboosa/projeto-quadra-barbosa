@@ -39,7 +39,6 @@ export class EditTimesComponent implements OnInit {
   }
 
   edit() {
-
     if (this.formulario.valid) {
       let timeDTO: Times;
 
