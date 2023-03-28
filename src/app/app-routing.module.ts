@@ -4,7 +4,7 @@ import { TimesTableComponent } from './feature/times/times-table/times-table.com
 import { CreateUserComponent } from './feature/user/create-user/create-user.component';
 import { UserTableComponent } from './feature/user/user-table/user-table.component';
 
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './feature/home/home.component';
 import { LoginComponent } from './feature/login/login.component';
@@ -17,7 +17,6 @@ import { EditCampeonatoComponent } from './feature/campeonatos/edit-campeonato/e
 import { CreateJogadorComponent } from './feature/jogadores/create-jogador/create-jogador.component';
 import { JogadoresTableComponent } from './feature/jogadores/jogadores-table/jogadores-table.component';
 import { EditJogadorComponent } from './feature/jogadores/edit-jogador/edit-jogador.component';
-import { TimeCampeonato } from './interface/timecampeonato';
 import { PartidasTableComponent } from './feature/partidas/partidas-table/partidas-table.component';
 import { CreatePartidasComponent } from './feature/partidas/create-partidas/create-partidas.component';
 import { EditPartidasComponent } from './feature/partidas/edit-partidas/edit-partidas.component';

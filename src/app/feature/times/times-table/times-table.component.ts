@@ -10,6 +10,7 @@ import { TimesService } from 'src/app/service/times.service';
   styleUrls: ['./times-table.component.css']
 })
 export class TimesTableComponent implements OnInit {
+  role = localStorage.getItem('role');
   times: Times[] = [];
   displayedColumns: string[] = ['id', 'time' , 'qtd_pontos', 'partidas', 'ganhadas', 'perdidas', 'empate', 'editar'];
 

@@ -10,6 +10,8 @@ import { Jogador } from 'src/app/interface/jogador';
   styleUrls: ['./jogadores-table.component.css'],
 })
 export class JogadoresTableComponent implements OnInit {
+  role = localStorage.getItem('role');
+
   jogadores: Jogador[] = [];
   displayedColumns: string[] = ['id', 'nome', 'posicao', 'time', 'editar'];
 

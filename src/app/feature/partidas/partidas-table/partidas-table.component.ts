@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./partidas-table.component.css']
 })
 export class PartidasTableComponent implements OnInit {
+  role = localStorage.getItem('role');
+
   timecampeonato: TimeCampeonato[] = [];
   displayedColumns: string[] = ['id', 'campeonato', 'time', 'editar'];
 

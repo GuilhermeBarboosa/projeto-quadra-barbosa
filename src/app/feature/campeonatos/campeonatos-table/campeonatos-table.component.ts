@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./campeonatos-table.component.css']
 })
 export class CampeonatosTableComponent implements OnInit {
+  role = localStorage.getItem('role');
+
   campeonatos: Campeonatos[] = [];
   displayedColumns: string[] = ['id', 'campeonato', 'editar'];
 
