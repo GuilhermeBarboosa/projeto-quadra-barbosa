@@ -2,7 +2,7 @@
   <div class="h-full px-3 py-4 overflow-y-auto bg-black">
      <ul class="space-y-2 font-medium">
         <li>
-           <a routerLink="/user" routerLinkActive="active" class="flex items-center p-2 text-white rounded-lg hover:bg-green-400">
+           <a routerLink="/user" *ngIf="role == 'ADM'" routerLinkActive="active" class="flex items-center p-2 text-white rounded-lg hover:bg-green-400">
               <mat-icon class="white-icon">person</mat-icon>
               <span class="ml-3">Usuários</span>
            </a>
@@ -26,7 +26,7 @@
            </a>
         </li>
         <li>
-           <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-green-400">
+           <a routerLink="/timecampeonato" routerLinkActive="active" class="flex items-center p-2 text-white rounded-lg hover:bg-green-400">
             <mat-icon class='white-icon' >sports_score</mat-icon>
               <span class="flex-1 ml-3 whitespace-nowrap">Partidas</span>
            </a>

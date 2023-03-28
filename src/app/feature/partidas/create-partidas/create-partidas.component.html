@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<div class="flex">
+  <app-sidebar></app-sidebar>
+
+
+  <form class="h-full w-full m-5" [formGroup]="formulario">
+    <p class="text-white font-medium justify-start text-lg font-bold">REGISTRE
+       PARTIDA</p>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Selecione o time</mat-label>
+          <mat-select formControlName="time">
+            <mat-option  *ngFor="let time of getTimes" [value]="time.id">
+              {{time.time}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Selecione o campeonato</mat-label>
+          <mat-select formControlName="campeonato">
+            <mat-option  *ngFor="let campeonato of getCampeonatos" [value]="campeonato.id">
+              {{campeonato.campeonato}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="mt-4 items-center flex justify-end">
+        <app-button-registrar (click)="create()"></app-button-registrar>
+      </div>
+
+</form>
+
+</div>

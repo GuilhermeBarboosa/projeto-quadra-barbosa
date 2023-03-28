@@ -17,6 +17,10 @@ import { EditCampeonatoComponent } from './feature/campeonatos/edit-campeonato/e
 import { CreateJogadorComponent } from './feature/jogadores/create-jogador/create-jogador.component';
 import { JogadoresTableComponent } from './feature/jogadores/jogadores-table/jogadores-table.component';
 import { EditJogadorComponent } from './feature/jogadores/edit-jogador/edit-jogador.component';
+import { TimeCampeonato } from './interface/timecampeonato';
+import { PartidasTableComponent } from './feature/partidas/partidas-table/partidas-table.component';
+import { CreatePartidasComponent } from './feature/partidas/create-partidas/create-partidas.component';
+import { EditPartidasComponent } from './feature/partidas/edit-partidas/edit-partidas.component';
 
 export const routes: Routes = [
   {
@@ -78,6 +82,18 @@ export const routes: Routes = [
   {
     path: 'jogador/edit/:id',
     component: EditJogadorComponent,
+  },
+  {
+    path: 'timecampeonato',
+    component: PartidasTableComponent,
+  },
+  {
+    path: 'timecampeonato/register',
+    component: CreatePartidasComponent,
+  },
+  {
+    path: 'timecampeonato/edit/:id',
+    component: EditPartidasComponent,
   },
   {
     path: '',
