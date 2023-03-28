@@ -1,3 +1,4 @@
+import { AuthGuardService } from './guards/auth-guard.service';
 import { CreateCampeonatoComponent } from './feature/campeonatos/create-campeonato/create-campeonato.component';
 
 import { TimesTableComponent } from './feature/times/times-table/times-table.component';
@@ -30,23 +31,35 @@ export const routes: Routes = [
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'user',
     component: UserTableComponent,
+    canActivate: [AuthGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'user/register',
     component: CreateUserComponent,
+    canActivate: [AuthGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'user/edit/:id',
     component: EditUserComponent,
+    canActivate: [AuthGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'time',
