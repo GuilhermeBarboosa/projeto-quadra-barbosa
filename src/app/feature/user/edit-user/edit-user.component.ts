@@ -42,7 +42,7 @@ export class EditUserComponent implements OnInit {
 
   }
 
-  edit(){
+ edit(){
     if(this.formulario.valid) {
 
       let userDTO: User;

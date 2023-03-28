@@ -1,4 +1,5 @@
 export interface Times{
+    id?: number | null;
     time: string | undefined;
     qtd_jogadores: number | undefined;
     qtd_pontos: number | undefined;
