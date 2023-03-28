@@ -24,12 +24,12 @@ export class CampeonatosService {
   }
 
   edit(campeonatos: Campeonatos, id: number) {
-    console.log(id)
+
     return this.http.put(`${environment.api}/campeonatos/${id}`, campeonatos);
   }
 
   delete(id: number) {
-    console.log(id);
+
     return this.http.delete(`${environment.api}/campeonatos/${id}`);
   }
 

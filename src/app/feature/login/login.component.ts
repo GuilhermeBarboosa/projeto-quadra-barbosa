@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    // console.log(this.formulario);
+
     if(this.formulario.valid) {
 
       let loginClass = new LoginClass();
@@ -51,7 +51,6 @@ export class LoginComponent implements OnInit {
             (data) => {
               loginResponse = JSON.parse(JSON.stringify(data));
 
-              // console.log(loginResponse)
               localStorage.setItem('userId', loginResponse.userId);
               localStorage.setItem('role', loginResponse.role);
 

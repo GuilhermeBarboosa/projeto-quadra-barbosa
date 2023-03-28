@@ -22,12 +22,12 @@ export class UserService {
   }
 
   edit(user: User, id: number) {
-    console.log(id)
+
     return this.http.put(`${environment.api}/users/${id}`, user);
   }
 
   delete(id: number) {
-    console.log(id);
+
     return this.http.delete(`${environment.api}/users/${id}`);
   }
 

@@ -22,7 +22,7 @@ export class TimesTableComponent implements OnInit {
       (data) => {
         var timesResponse = JSON.parse(JSON.stringify(data));
         this.times = timesResponse;
-        console.log(this.times);
+
       }
     );
   }

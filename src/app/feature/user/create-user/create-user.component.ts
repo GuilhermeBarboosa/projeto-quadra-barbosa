@@ -31,7 +31,6 @@ export class CreateUserComponent implements OnInit {
   }
 
   create(){
-    console.log(this.formulario)
 
     if(this.formulario.valid) {
 

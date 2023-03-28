@@ -23,12 +23,12 @@ export class TimesService {
   }
 
   edit(times: Times, id: number) {
-    console.log(id)
+
     return this.http.put(`${environment.api}/times/${id}`, times);
   }
 
   delete(id: number) {
-    console.log(id);
+
     return this.http.delete(`${environment.api}/times/${id}`);
   }
 

@@ -34,7 +34,6 @@ export class CreateTimesComponent implements OnInit {
   }
 
   create() {
-    // console.log(this.formulario)
 
     if (this.formulario.valid) {
       let timeDTO = {

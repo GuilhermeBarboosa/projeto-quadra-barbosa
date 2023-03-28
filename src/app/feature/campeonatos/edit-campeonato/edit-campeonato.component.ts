@@ -27,7 +27,7 @@ export class EditCampeonatoComponent implements OnInit {
     this.campeonatosService.getById(this.id).subscribe((data) => {
       var campeonatoResponse = JSON.parse(JSON.stringify(data));
 
-      console.log(campeonatoResponse)
+
 
       this.formulario = this.formBuilder.group({
         campeonato: [campeonatoResponse.campeonato, Validators.required]

@@ -27,7 +27,7 @@ export class UserTableComponent implements OnInit {
       (data) => {
         var usersResponse = JSON.parse(JSON.stringify(data));
         this.users = usersResponse;
-        console.log(this.users);
+
       }
     );
   }

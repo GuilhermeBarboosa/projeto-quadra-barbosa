@@ -22,7 +22,7 @@ export class CampeonatosTableComponent implements OnInit {
       (data) => {
         var campeonatoResponse = JSON.parse(JSON.stringify(data));
         this.campeonatos = campeonatoResponse;
-        console.log(this.campeonatos);
+
       }
     );
   }

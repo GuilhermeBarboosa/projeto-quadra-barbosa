@@ -29,8 +29,6 @@ export class EditUserComponent implements OnInit {
 
         var userResponse = JSON.parse(JSON.stringify(data));
 
-        console.log(userResponse.nome)
-
         this.formulario = this.formBuilder.group({
           nome: [userResponse.nome, Validators.required],
           email: [userResponse.email, Validators.required],

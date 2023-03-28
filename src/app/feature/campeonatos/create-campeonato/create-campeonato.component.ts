@@ -28,7 +28,6 @@ export class CreateCampeonatoComponent implements OnInit {
   }
 
   create() {
-    // console.log(this.formulario)
 
     if (this.formulario.valid) {
       let campeonatosDTO = {

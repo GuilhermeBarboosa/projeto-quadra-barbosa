@@ -26,8 +26,6 @@ export class EditTimesComponent implements OnInit {
     this.timesService.getById(this.id).subscribe((data) => {
       var timesResponse = JSON.parse(JSON.stringify(data));
 
-      console.log(timesResponse)
-
       this.formulario = this.formBuilder.group({
         time: [timesResponse.time, Validators.required],
         qtd_pontos: [timesResponse.qtd_pontos, Validators.required],
