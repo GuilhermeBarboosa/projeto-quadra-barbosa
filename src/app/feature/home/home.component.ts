@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.verifytokenService.verifyJWT();
-    this.notifier.ShowSuccess('Login realizado com sucesso!');
   }
 
 }

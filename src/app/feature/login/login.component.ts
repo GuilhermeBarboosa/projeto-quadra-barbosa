@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
               localStorage.setItem('userId', loginResponse.userId);
               localStorage.setItem('role', loginResponse.role);
 
+              this.notifier.ShowSuccess('Login realizado com sucesso!');
               this.router.navigateByUrl('/home');
             }
           )
