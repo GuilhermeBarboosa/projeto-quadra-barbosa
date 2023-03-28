@@ -34,4 +34,7 @@ export class TimeCampeonatoService {
     return this.http.delete(`${environment.api}/timecampeonato/${id}`);
   }
 
+  getAllJogos(id: number) {
+    return this.http.get(`${environment.api}/timecampeonato/getPartidas/${id}`);
+  }
 }

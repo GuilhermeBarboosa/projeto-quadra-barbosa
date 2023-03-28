@@ -21,6 +21,8 @@ import { TimeCampeonato } from './interface/timecampeonato';
 import { PartidasTableComponent } from './feature/partidas/partidas-table/partidas-table.component';
 import { CreatePartidasComponent } from './feature/partidas/create-partidas/create-partidas.component';
 import { EditPartidasComponent } from './feature/partidas/edit-partidas/edit-partidas.component';
+import { JogosTableComponent } from './feature/mostrar_tabela_jogos/jogos-table/jogos-table.component';
+import { InfoJogosComponent } from './feature/mostrar_tabela_jogos/info-jogos/info-jogos.component';
 
 export const routes: Routes = [
   {
@@ -94,6 +96,14 @@ export const routes: Routes = [
   {
     path: 'timecampeonato/edit/:id',
     component: EditPartidasComponent,
+  },
+  {
+    path: 'jogos',
+    component: JogosTableComponent,
+  },
+  {
+    path: 'jogos/info/:id',
+    component: InfoJogosComponent,
   },
   {
     path: '',
