@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="flex">
+  <app-sidebar></app-sidebar>
+
+
+  <form class="h-full w-full m-5" [formGroup]="formulario" *ngIf="formulario">
+    <p class="text-black font-medium justify-start text-lg font-bold">REGISTRE
+      O TIMES</p>
+
+      <div class="">
+        <label class="block text-sm text-white" for="campeonato">Campeonato</label>
+        <input formControlName="campeonato" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" type="text" id="campeonato"  placeholder="Campeonato" aria-label="campeonato" required>
+      </div>
+
+      <div class="mt-4 items-center flex justify-between">
+        <app-button-excluir (click)="remove()"></app-button-excluir>
+        <app-button-editar (click)="edit()"></app-button-editar>
+      </div>
+
+</form>
+
+</div>

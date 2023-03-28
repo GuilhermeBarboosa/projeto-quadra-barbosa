@@ -1,3 +1,4 @@
+import { CampeonatosTableComponent } from './feature/campeonatos/campeonatos-table/campeonatos-table.component';
 import { EditUserComponent } from './feature/user/edit-user/edit-user.component';
 import { UserTableComponent } from './feature/user/user-table/user-table.component';
 import { CommonModule } from '@angular/common';
@@ -34,6 +35,8 @@ import { ButtonRegistrarComponent } from './components/button-registrar/button-r
 import { TimesTableComponent } from './feature/times/times-table/times-table.component';
 import { EditTimesComponent } from './feature/times/edit-times/edit-times.component';
 import { CreateTimesComponent } from './feature/times/create-times/create-times.component';
+import { CreateCampeonatoComponent } from './feature/campeonatos/create-campeonato/create-campeonato.component';
+import { EditCampeonatoComponent } from './feature/campeonatos/edit-campeonato/edit-campeonato.component';
 @NgModule({
   declarations: [
       AppComponent,
@@ -47,6 +50,9 @@ import { CreateTimesComponent } from './feature/times/create-times/create-times.
       TimesTableComponent,
       EditTimesComponent,
       CreateTimesComponent,
+      CampeonatosTableComponent,
+      CreateCampeonatoComponent,
+      EditCampeonatoComponent,
       EditUserComponent,
       ButtonAdicionarComponent,
       ButtonExcluirComponent,

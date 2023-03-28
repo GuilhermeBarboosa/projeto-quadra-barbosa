@@ -1,3 +1,5 @@
+import { CreateCampeonatoComponent } from './feature/campeonatos/create-campeonato/create-campeonato.component';
+
 import { TimesTableComponent } from './feature/times/times-table/times-table.component';
 import { CreateUserComponent } from './feature/user/create-user/create-user.component';
 import { UserTableComponent } from './feature/user/user-table/user-table.component';
@@ -10,6 +12,8 @@ import { RegisterComponent } from './feature/register/register.component';
 import { EditUserComponent } from './feature/user/edit-user/edit-user.component';
 import { EditTimesComponent } from './feature/times/edit-times/edit-times.component';
 import { CreateTimesComponent } from './feature/times/create-times/create-times.component';
+import { CampeonatosTableComponent } from './feature/campeonatos/campeonatos-table/campeonatos-table.component';
+import { EditCampeonatoComponent } from './feature/campeonatos/edit-campeonato/edit-campeonato.component';
 
 export const routes: Routes = [
   {
@@ -47,6 +51,18 @@ export const routes: Routes = [
   {
     path: 'time/edit/:id',
     component: EditTimesComponent,
+  },
+  {
+    path: 'campeonato',
+    component: CampeonatosTableComponent,
+  },
+  {
+    path: 'campeonato/register',
+    component: CreateCampeonatoComponent,
+  },
+  {
+    path: 'campeonato/edit/:id',
+    component: EditCampeonatoComponent,
   },
   {
     path: '',
