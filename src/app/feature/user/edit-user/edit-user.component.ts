@@ -12,7 +12,6 @@ import { User } from 'src/app/interface/user';
 })
 export class EditUserComponent implements OnInit {
 
-
   formulario!: FormGroup;
   id = this.activedRouter.snapshot.params['id'];
 
@@ -28,16 +27,16 @@ export class EditUserComponent implements OnInit {
     this.userService.getById(this.id).subscribe(
       (data) => {
 
-        var loginResponse = JSON.parse(JSON.stringify(data));
+        var userResponse = JSON.parse(JSON.stringify(data));
 
-        console.log(loginResponse.nome)
+        console.log(userResponse.nome)
 
         this.formulario = this.formBuilder.group({
-          nome: [loginResponse.nome, Validators.required],
-          email: [loginResponse.email, Validators.required],
-          senha: [loginResponse.senha, Validators.required],
-          idade: [loginResponse.idade, Validators.required],
-          role: [loginResponse.role, Validators.required]
+          nome: [userResponse.nome, Validators.required],
+          email: [userResponse.email, Validators.required],
+          senha: [userResponse.senha, Validators.required],
+          idade: [userResponse.idade, Validators.required],
+          role: [userResponse.role, Validators.required]
         })
       }
     );
@@ -69,6 +68,8 @@ export class EditUserComponent implements OnInit {
         }
         );
 
+    } else {
+      this.notifier.ShowError('Formulário inválido!');
     }
   }
 

@@ -1,3 +1,4 @@
+import { TimesTableComponent } from './feature/times/times-table/times-table.component';
 import { CreateUserComponent } from './feature/user/create-user/create-user.component';
 import { UserTableComponent } from './feature/user/user-table/user-table.component';
 
@@ -7,6 +8,8 @@ import { HomeComponent } from './feature/home/home.component';
 import { LoginComponent } from './feature/login/login.component';
 import { RegisterComponent } from './feature/register/register.component';
 import { EditUserComponent } from './feature/user/edit-user/edit-user.component';
+import { EditTimesComponent } from './feature/times/edit-times/edit-times.component';
+import { CreateTimesComponent } from './feature/times/create-times/create-times.component';
 
 export const routes: Routes = [
   {
@@ -32,6 +35,18 @@ export const routes: Routes = [
   {
     path: 'user/edit/:id',
     component: EditUserComponent,
+  },
+  {
+    path: 'time',
+    component: TimesTableComponent,
+  },
+  {
+    path: 'time/register',
+    component: CreateTimesComponent,
+  },
+  {
+    path: 'time/edit/:id',
+    component: EditTimesComponent,
   },
   {
     path: '',

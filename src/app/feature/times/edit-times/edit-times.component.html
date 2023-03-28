@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+
+
+
+<div class="flex">
+  <app-sidebar></app-sidebar>
+
+
+  <form class="h-full w-full m-5" [formGroup]="formulario" *ngIf="formulario">
+    <p class="text-black font-medium justify-start text-lg font-bold">REGISTRE
+      O TIMES</p>
+
+      <div class="">
+        <label class="block text-sm text-white" for="time">Time</label>
+        <input formControlName="time" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" type="text" id="time"  placeholder="Time" aria-label="time" required>
+      </div>
+
+      <div class="">
+        <label class="block text-sm text-white" for="qtd_pontos">Quantidade de pontos</label>
+        <input formControlName="qtd_pontos" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" type="number" id="qtd_pontos"  placeholder="Quantidade de pontos" aria-label="qtd_pontos" required>
+      </div>
+
+      <div class="">
+        <label class="block text-sm text-white" for="partidas_jogadas">Partidas</label>
+        <input formControlName="partidas_jogadas" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" type="number" id="partidas_jogadas"  placeholder="Quantidade de partidas_jogadas" aria-label="partidas_jogadas" required>
+      </div>
+
+      <div class="">
+        <label class="block text-sm text-white" for="vitorias">Vitórias</label>
+        <input formControlName="vitorias" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" type="number" id="vitorias"  placeholder="Quantidade de vitórias" aria-label="vitorias" required>
+
+      </div>
+
+      <div class="">
+        <label class="block text-sm text-white" for="empate">Empates</label>
+        <input formControlName="empate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" type="number" id="empate"  placeholder="Quantidade de empate" aria-label="empates" required>
+      </div>
+
+      <div class="">
+        <label class="block text-sm text-white" for="perdidas">Derrotas</label>
+        <input formControlName="perdidas" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" type="number" id="perdidas"  placeholder="Quantidade de derrotas" aria-label="derrotas" required>
+      </div>
+
+      <div class="mt-4 items-center flex justify-between">
+        <app-button-excluir (click)="remove()"></app-button-excluir>
+        <app-button-editar (click)="edit()"></app-button-editar>
+      </div>
+
+</form>
+
+</div>

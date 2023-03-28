@@ -31,6 +31,9 @@ import { ButtonAdicionarComponent } from './components/button-adicionar/button-a
 import { ButtonExcluirComponent } from './components/button-excluir/button-excluir.component';
 import { ButtonEditarComponent } from './components/button-editar/button-editar.component';
 import { ButtonRegistrarComponent } from './components/button-registrar/button-registrar.component';
+import { TimesTableComponent } from './feature/times/times-table/times-table.component';
+import { EditTimesComponent } from './feature/times/edit-times/edit-times.component';
+import { CreateTimesComponent } from './feature/times/create-times/create-times.component';
 @NgModule({
   declarations: [
       AppComponent,
@@ -41,6 +44,9 @@ import { ButtonRegistrarComponent } from './components/button-registrar/button-r
       SidebarComponent,
       UserTableComponent,
       CreateUserComponent,
+      TimesTableComponent,
+      EditTimesComponent,
+      CreateTimesComponent,
       EditUserComponent,
       ButtonAdicionarComponent,
       ButtonExcluirComponent,
@@ -68,7 +74,7 @@ import { ButtonRegistrarComponent } from './components/button-registrar/button-r
     ToastrModule.forRoot()
   ],
   providers: [
-    LoginServiceService
+    LoginServiceService,
   ],
   bootstrap: [AppComponent]
 })

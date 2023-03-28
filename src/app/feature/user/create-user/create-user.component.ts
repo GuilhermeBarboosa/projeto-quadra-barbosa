@@ -56,6 +56,8 @@ export class CreateUserComponent implements OnInit {
 
         );
 
+    } else {
+      this.notifier.ShowError('Formulário inválido!');
     }
   }
 
