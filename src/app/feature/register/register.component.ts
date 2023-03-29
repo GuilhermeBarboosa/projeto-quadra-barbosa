@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       senha: ['', [Validators.required, Validators.minLength(3)]],
       nome: ['', [Validators.required, Validators.minLength(3)]],
-      idade: ['', [Validators.required, Validators.min(14)]],
+      idade: ['', [Validators.required, Validators.min(14), Validators.max(70)]],
       role: ['', Validators.required]
     })
   }
@@ -58,6 +58,7 @@ export class RegisterComponent implements OnInit {
         );
 
     } else {
+      this.formulario.markAllAsTouched();
       this.notifier.ShowError('Formulário inválido!');
     }
   }
