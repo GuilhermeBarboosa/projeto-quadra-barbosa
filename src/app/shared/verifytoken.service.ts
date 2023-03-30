@@ -16,8 +16,9 @@ export class VerifytokenService {
           this.router.navigateByUrl('/home');
         },
         (error) => {
-          localStorage.removeItem('token');
+          localStorage.clear();
           this.notifier.ShowInfo('Faça seu login');
+          this.router.navigateByUrl('/login');
         }
       );
     }
