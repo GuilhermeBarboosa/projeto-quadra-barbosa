@@ -26,6 +26,10 @@ export class UserService {
     return this.http.put(`${environment.api}/users/${id}`, user);
   }
 
+  ativar(user: User, id: number) {
+    return this.http.put(`${environment.api}/users/ativar/${id}`, user);
+  }
+
   delete(id: number) {
 
     return this.http.delete(`${environment.api}/users/${id}`);

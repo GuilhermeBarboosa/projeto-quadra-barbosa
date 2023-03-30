@@ -23,6 +23,10 @@ export class JogadoresService {
     return this.http.get(`${environment.api}/jogadores`);
   }
 
+  getByJogadorUser(id: number) {
+    return this.http.get(`${environment.api}/jogadores/getJogadorUser/` + id);
+  }
+
   edit(jogadores: Jogador, id: number) {
 
     return this.http.put(`${environment.api}/jogadores/${id}`, jogadores);

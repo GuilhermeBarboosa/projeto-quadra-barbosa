@@ -46,6 +46,7 @@ import { CreatePartidasComponent } from './feature/partidas/create-partidas/crea
 import { EditPartidasComponent } from './feature/partidas/edit-partidas/edit-partidas.component';
 import { JogosTableComponent } from './feature/mostrar_tabela_jogos/jogos-table/jogos-table.component';
 import { InfoJogosComponent } from './feature/mostrar_tabela_jogos/info-jogos/info-jogos.component';
+import { ProfileComponent } from './feature/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,6 +70,7 @@ import { InfoJogosComponent } from './feature/mostrar_tabela_jogos/info-jogos/in
     EditPartidasComponent,
     JogosTableComponent,
     InfoJogosComponent,
+    ProfileComponent,
     EditJogadorComponent,
     EditUserComponent,
     ButtonAdicionarComponent,

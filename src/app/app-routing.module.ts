@@ -23,11 +23,16 @@ import { CreatePartidasComponent } from './feature/partidas/create-partidas/crea
 import { EditPartidasComponent } from './feature/partidas/edit-partidas/edit-partidas.component';
 import { JogosTableComponent } from './feature/mostrar_tabela_jogos/jogos-table/jogos-table.component';
 import { InfoJogosComponent } from './feature/mostrar_tabela_jogos/info-jogos/info-jogos.component';
+import { ProfileComponent } from './feature/profile/profile.component';
 
 export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
   },
   {
     path: 'register',
