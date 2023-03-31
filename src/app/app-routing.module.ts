@@ -24,6 +24,7 @@ import { EditPartidasComponent } from './feature/partidas/edit-partidas/edit-par
 import { JogosTableComponent } from './feature/mostrar_tabela_jogos/jogos-table/jogos-table.component';
 import { InfoJogosComponent } from './feature/mostrar_tabela_jogos/info-jogos/info-jogos.component';
 import { ProfileComponent } from './feature/profile/profile.component';
+import { LoginGuardService } from './guards/login-guard.service';
 
 export const routes: Routes = [
   {
@@ -33,6 +34,7 @@ export const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: 'register',
@@ -41,11 +43,12 @@ export const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: 'user',
     component: UserTableComponent,
-    canActivate: [AuthGuardService],
+    canActivate: [AuthGuardService, LoginGuardService],
     data: {
       role: 'ADM',
     },
@@ -53,7 +56,7 @@ export const routes: Routes = [
   {
     path: 'user/register',
     component: CreateUserComponent,
-    canActivate: [AuthGuardService],
+    canActivate: [AuthGuardService, LoginGuardService],
     data: {
       role: 'ADM',
     },
@@ -61,7 +64,7 @@ export const routes: Routes = [
   {
     path: 'user/edit/:id',
     component: EditUserComponent,
-    canActivate: [AuthGuardService],
+    canActivate: [AuthGuardService, LoginGuardService],
     data: {
       role: 'ADM',
     },
@@ -69,58 +72,96 @@ export const routes: Routes = [
   {
     path: 'time',
     component: TimesTableComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: 'time/register',
     component: CreateTimesComponent,
+    canActivate: [AuthGuardService, LoginGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'time/edit/:id',
     component: EditTimesComponent,
+    canActivate: [AuthGuardService, LoginGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'campeonato',
     component: CampeonatosTableComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: 'campeonato/register',
     component: CreateCampeonatoComponent,
+    canActivate: [AuthGuardService, LoginGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'campeonato/edit/:id',
     component: EditCampeonatoComponent,
+    canActivate: [AuthGuardService, LoginGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'jogador',
     component: JogadoresTableComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: 'jogador/register',
     component: CreateJogadorComponent,
+    canActivate: [AuthGuardService, LoginGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'jogador/edit/:id',
     component: EditJogadorComponent,
+    canActivate: [AuthGuardService, LoginGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'timecampeonato',
     component: PartidasTableComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: 'timecampeonato/register',
     component: CreatePartidasComponent,
+    canActivate: [AuthGuardService, LoginGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'timecampeonato/edit/:id',
     component: EditPartidasComponent,
+    canActivate: [AuthGuardService, LoginGuardService],
+    data: {
+      role: 'ADM',
+    },
   },
   {
     path: 'jogos',
     component: JogosTableComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: 'jogos/info/:id',
     component: InfoJogosComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: '',

@@ -22,6 +22,14 @@ constructor(private http: HttpClient) { }
     return this.http.post(`${environment.api}/users/verificartoken`, this.tokenDTO);
   }
 
+  isLogin(){
+    if (localStorage.getItem('token') != null) {
+      console.log('teste')
+      return true;
+    }
+    return false;
+  }
+
 }
 
 
